@@ -26,7 +26,7 @@ function ChatBox({ user }) {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/agent', {
+      const response = await axios.post('https://agentic-health-assistant-fupm.onrender.com/api/agent', {
         prompt,
         user,
         chat_history: updatedMessages.map(msg => ({

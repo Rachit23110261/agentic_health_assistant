@@ -11,7 +11,7 @@ function LoginForm({ onLogin }) {
     if (!name || !email || !role) return alert('Please fill in all fields.');
 
     try {
-      const res = await axios.post('http://127.0.0.1:8000/api/login', null, {
+      const res = await axios.post('https://agentic-health-assistant-fupm.onrender.com/api/login', null, {
         params: { name, email, role }
       });
       onLogin(res.data); 
